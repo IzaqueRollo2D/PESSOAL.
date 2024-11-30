@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Caixa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fluxo de Caixa</h1>
+        
+        <form id="fluxoForm">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição da transação" required>
+            
+            <label for="valor">Valor (R$)</label>
+            <input type="number" id="valor" placeholder="Digite o valor da transação" required>
+            
+            <label for="tipo">Tipo de Transação</label>
+            <select id="tipo" required>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            
+            <button type="submit">Adicionar Transação</button>
+        </form>
+
+        <div class="saldo">
+            <h3>Saldo Atual: <span id="saldo">R$ 0,00</span></h3>
+        </div>
+
+        <table id="fluxoTable">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor (R$)</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As transações serão exibidas aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
